@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Recetario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+
+<body>
+    <div id="wrapper" class="d-flex">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"> </div>
+            <div class="list-group list-group-flush">
+                <a href="index.html" class="list-group-item list-group-item-action bg-light">Ver Lista de Recetas</a>
+                <a href="add-recipe.html" class="list-group-item list-group-item-action bg-light">Agregar Receta</a>
+                <a href="info-nutricion.html" class="list-group-item list-group-item-action bg-light">Informacion Nutricional</a>
+                <a href="welcome.html" class="btn btn-primary">Cerrar Sesion </a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">Menu</button>
+            </nav>
+            <div class="container-fluid">
+                <h1 class="mt-4 text-center">Lista de Recetas de <span id="user-name"></span></h1>
+                <input class="form-control mb-4" id="search-bar" type="text" placeholder="Buscar receta...">
+                <div class="row" id="recipe-list">
+                    <!-- Todas las recetas almacenadas se mostrarán aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Burbuja de chat flotante -->
+     <div id="chat-bubble">💬</div>
+     <div id="chat-container">
+         <div id="chat-header"><b>Chat</b>
+            <h6> <b> Ingresa ingredientes y descubre recetas nuevas</b></h6>
+         </div>
+         <div id="chat-body">
+             <div id="chat-response"></div>
+         </div>
+         <form id="chat-form">
+             <input type="text" placeholder="Ingresa tus ingredientes..."class="form-control" id="user-input" required>
+             <button type="submit" class="btn btn-primary">Enviar</button>
+         </form>
+     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="burbuja-chat.js"></script>
+</body>
+</html>

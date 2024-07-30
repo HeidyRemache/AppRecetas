@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-image {
+            background: url('https://img.freepik.com/foto-gratis/vista-superior-tortilla-mexicana-espacio-copia_23-2148614430.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .text-custom {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .subtext-custom {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .text-wrapper {
+            background-color: rgba(12, 138, 1, 0.5); /* Background semi-transparente para mejorar la legibilidad */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100 bg-image text-white text-center">
+        <div class="text-wrapper">
+            <h1 class="display-4 text-custom">Tu Recetario<br>Personal</h1>
+            <p class="lead subtext-custom">La mejor aplicación web para guardar tus recetas favoritas</p>
+            <button class="btn btn-light mt-4" id="read-more-button">Ingresar</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('read-more-button').addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

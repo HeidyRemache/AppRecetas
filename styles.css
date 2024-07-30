@@ -1,0 +1,215 @@
+/* Custom styles */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Fondo blanco para todas las páginas */
+    color: #333;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    background-color: #67f36b !important;
+    width: 250px;
+    min-height: 100vh;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    background: url('https://img.hellofresh.com/w_3840,q_auto,f_auto,c_fill,fl_lossy/hellofresh_website/es/cms/SEO/recipes/albondigas-caseras-de-cerdo-con-salsa-barbacoa.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+    color: #110c0c;
+    border: none;
+    padding: 15px 20px;
+    
+}
+
+#sidebar-wrapper .list-group-item {
+    background-color: #67f36b !important; /* Color verde ligero */
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: #fffefe !important; /* Fondo blanco al pasar el mouse */
+    color: #67f36b; /* Texto verde oscuro al pasar el mouse */
+    cursor: pointer;
+}
+
+#sidebar-wrapper .list-group-item i {
+    margin-right: 10px;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+    padding: 20px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+/* para el welcome */
+.bg-image {
+    background-image: url('https://img.freepik.com/foto-gratis/vista-superior-tortilla-mexicana-espacio-copia_23-2148614430.jpg?size=626&ext=jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+#read-more-button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#read-more-button:hover {
+    background-color: #218838;
+}
+
+/* Chat flotante */
+#chat-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #28a745; /* Color verde predominante */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#chat-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+}
+
+#chat-header {
+    background-color: #28a745; /* Color verde predominante */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#chat-body {
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+#chat-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+#chat-form input {
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#chat-form button {
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: #28a745; /* Color verde predominante */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+#chat-response {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Estilos de contenedores con borde verde neón */
+.recipe-container {
+    border: 2px solid #39ff14 ; /* Borde verde neón */
+    border-radius: 0.50rem;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #39ff14;
+}
+
+.nutrition-form .form-control, .add-recipe-form .form-control {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    padding: 10px;
+}
+
+/* Estilo para botones */
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Estilo para formularios */
+.form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}

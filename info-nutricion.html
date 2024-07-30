@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Nutricional</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="d-flex">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"> </div>
+            <div class="list-group list-group-flush">
+                <a href="index.html" class="list-group-item list-group-item-action bg-light">Ver Lista de Recetas</a>
+                <a href="add-recipe.html" class="list-group-item list-group-item-action bg-light">Agregar Receta</a>
+                <a href="info-nutricion.html" class="list-group-item list-group-item-action bg-light">Información Nutricional</a>
+                <a href="welcome.html" class="btn btn-primary">Cerrar Sesión</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">Menú</button>
+            </nav>
+            <div class="container mt-5">
+                <h1 class="mt-4 text-center">Información Nutricional de <span id="user-name"></span></h1>
+                <a href="formulario-nutricion.html" class="btn btn-primary">Agregar Información Nutricional</a>
+                <!-- Primera fila de gráficos -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <canvas id="waterChart"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <canvas id="caloriesChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Segunda fila de gráficos -->
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <canvas id="proteinChart"></canvas>
+                    </div>
+                    <div class="col-md-4">
+                        <canvas id="carbsChart"></canvas>
+                    </div>
+                    <div class="col-md-4">
+                        <canvas id="fatsChart"></canvas>
+                    </div>
+                </div>
+
+                <h2 class="mt-5">Resumen</h2>
+                <table id="summaryTable" class="table table-striped">
+                    <!-- El contenido de la tabla será generado por JavaScript -->
+                </table>
+
+                <!-- Burbuja de chat flotante -->
+                <div id="chat-bubble">💬</div>
+                <div id="chat-container">
+                    <div id="chat-header"><b>Chat</b>
+                        <h6><b>Ingresa ingredientes y descubre recetas nuevas</b></h6>
+                    </div>
+                    <div id="chat-body">
+                        <div id="chat-response"></div>
+                    </div>
+                    <form id="chat-form">
+                        <input type="text" placeholder="Ingresa tus ingredientes..." class="form-control" id="user-input" required>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="burbuja-chat.js"></script> <!-- Incluye el nuevo archivo de script -->
+    <script src="nutricion.js"></script> <!-- Archivo de script para la funcionalidad de la página de información nutricional -->
+</body>
+</html>

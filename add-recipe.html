@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar/Editar Receta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="wrapper" class="d-flex">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"></div>
+            <div class="list-group list-group-flush">
+                <a href="index.html" class="list-group-item list-group-item-action bg-light">Ver Lista de Recetas</a>
+                <a href="add-recipe.html" class="list-group-item list-group-item-action bg-light">Agregar Receta</a>
+                <a href="info-nutricion.html" class="list-group-item list-group-item-action bg-light">Informacion Nutricional</a>
+                <a href="welcome.html" class="btn btn-primary">Cerrar Sesion</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">Menu</button>
+            </nav>
+            <div class="container mt-5">
+                <h1 id="form-title">Agregar Nueva Receta</h1>
+                <button class="btn btn-secondary mt-4" onclick="window.location.href='index.html'">Inicio</button>
+                <h1 class="mt-4"></h1>
+                <form id="add-recipe-form">
+                    <div class="form-group">
+                        <label for="recipe-name">Nombre de la receta</label>
+                        <input type="text" class="form-control" id="recipe-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-image">URL de la imagen</label>
+                        <input type="url" class="form-control" id="recipe-image" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-ingredients">Ingredientes</label>
+                        <textarea class="form-control" id="recipe-ingredients" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-instructions">Instrucciones</label>
+                        <textarea class="form-control" id="recipe-instructions" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Agregar Receta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
